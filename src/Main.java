@@ -8,18 +8,13 @@ public class Main {
 
         System.out.println("Введите числа (0 для завершения):");
 
-        while (true) {
-            int num = scanner.nextInt();
-            if (num == 0) {
-                break;
-            }
+        int num;
+        while ((num = scanner.nextInt()) != 0) {
             numbers.add(num);
         }
 
         System.out.println("Несовпадающие числа в последовательности:");
-        for (int number : numbers) {
-            System.out.println(number);
-        }
+        numbers.forEach(System.out::println);
 
         scanner.close();
     }
